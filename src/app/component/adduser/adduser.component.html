@@ -1,0 +1,40 @@
+<div class="container" style="margin-top: 15px;">
+    <div class="row" style="margin-top: 20px;">
+        <div class=" col-sm-12">
+            <div class="card shadow"> 
+                <div class="card-body">
+                    <form novalidate>
+                        <div class="mb-3">
+                            <label for="fullname" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" name="FullName" #FullName="ngModel" [(ngModel)]="User.FullName"
+                                placeholder="Full Name" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="Email" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="strEmail" #Email="ngModel" [(ngModel)]="User.Email"
+                                placeholder="Email" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" name="Password" #Password="ngModel" [(ngModel)]="User.Password" placeholder="password"
+                                required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="UserRole" class="form-label">Role</label>
+                            <select class="form-control" name="UserRole" #UserRole="ngModel" [(ngModel)]="User.UserRole">
+                                <option value="Administrator">Administrator</option>
+                                <option value="user">user</option>
+                              </select>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-2">
+                                <input type="button" value="Save" class="btn btn-info" (click)="AddUser()" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

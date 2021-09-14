@@ -1,0 +1,40 @@
+<div class="container" style="margin-top: 50px;">
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-sm-12">
+            <div class="card shadow"> 
+                <div class="card-body">
+                    <form #custForm="ngForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label"> Name</label>
+                            <input type="text" class="form-control" name="Name" #strName="ngModel" [(ngModel)]="Product.Name"
+                                placeholder="Product Name" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="price" class="form-label">Price</label>
+                            <input type="number" class="form-control" name="intPrice" #Price="ngModel" [(ngModel)]="Product.Price"
+                                placeholder="Price" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="quantity" class="form-label"> Quantity</label>
+                            <input type="number" class="form-control" name="Quantity" #Quantity="ngModel" [(ngModel)]="Product.Quantity" placeholder="Quantity"
+                                required />
+                        </div>
+                
+                        <div class="mb-3">
+                            <label for="image" class="form-label">Image Link(link to the image)</label>
+                            <input type="text" class="form-control" name="Image" #Image="ngModel" [(ngModel)]="Product.Image" placeholder="image"
+                                required />
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-4">
+                                <input type="button" value="Save"  (click)="SaveProduct()"  class="btn btn-info"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,35 @@
+<div class="container" style="margin-top:50px;">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    User Details
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th>First Name</th>
+                                <td><input type="text" class="form-control" value="{{User.FullName}}" name="FullName" #FullName="ngModel" [(ngModel)]="User.FullName"
+                                    placeholder="Full Name" /></td>
+                            </tr>
+                            <tr>
+                                <th>User Email</th>
+                                <td> <input type="text" class="form-control" value="{{User.Email}}" name="Email" #strLastName="ngModel" [(ngModel)]="User.Email"
+                                    placeholder="Email" /></td>
+                            </tr>
+                            <tr>
+                                <th>User Role</th>
+                                <td>  <input type="text" class="form-control" value="{{User.UserRole}}" name="UserRole" #UserRole="ngModel" [(ngModel)]="User.UserRole"
+                                    placeholder="Role" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-info" (click)="UpdateUser()">Update</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
